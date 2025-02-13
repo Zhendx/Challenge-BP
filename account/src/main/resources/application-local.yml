@@ -1,0 +1,32 @@
+server:
+  port: 8181
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: postgrespw
+    username: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  auditor:
+    mode: 'CONSOLE'
+  sendLog: true
+  level:
+    org.springframework: DEBUG
+
+control:
+  errors:
+    trace: false
