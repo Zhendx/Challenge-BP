@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.6'
 }
 
-def packageName = "com.pichincha.business.banking.services"
+def packageName = "com.services"
 
 group = '${packageName}'
 version = '0.0.1-SNAPSHOT'

@@ -1,0 +1,9 @@
+info:
+  project:
+    name: client
+    version: 1.0.0
+
+test:
+  clients:
+    client:
+      path: /support/business-banking/v1/clients

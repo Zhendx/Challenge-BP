@@ -1,22 +1,18 @@
 server:
-  port: 8282
+  port: 8283
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 spring:
   main:
     allow-bean-definition-overriding: on
     lazy-initialization: on
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    password: postgrespw
-    username: postgres
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  r2dbc:
+    url: r2dbc:pool:postgresql://postgres:postgrespw@localhost:5432/postgres
   output:
     ansi:
       enabled: ALWAYS
