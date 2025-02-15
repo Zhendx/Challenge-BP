@@ -1,0 +1,670 @@
+{
+	"info": {
+		"_postman_id": "92c50949-6fe3-4263-937b-6e7036a321e6",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "GetByFilter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8283/support/business-banking/v1/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8283",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"123456\",\n  \"status\": true,\n  \"person\": {\n    \"name\": \"Paul Hernandez\",\n    \"gender\": {\n      \"code\": \"MALE\"\n    },\n    \"age\": 20,\n    \"identification\": {\n      \"type\": {\n        \"code\": \"IDCD\",\n        \"name\": \"Cedula\"\n      },\n      \"identifier\": {\n        \"value\": \"2301814214904\"\n      }\n    },\n    \"address\": {\n      \"type\": \"addressLine\",\n      \"value\": \"Junin\"\n    },\n    \"phoneAddress\": {\n      \"type\": \"PhoneNumber\",\n      \"description\": \"9418755692\"\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8283/support/business-banking/v1/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8283",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8283/support/business-banking/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8283",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutClient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": true,\n  \"person\": {\n    \"name\": \"Andrea Delgado\",\n    \"gender\": {\n      \"code\": \"MALE\"\n    },\n    \"age\": 26,\n    \"identification\": {\n      \"type\": {\n        \"code\": \"IDCD\",\n        \"name\": \"Cedula\"\n      },\n      \"identifier\": {\n        \"value\": \"2425909743545\"\n      }\n    },\n    \"address\": {\n      \"type\": \"callePrincipal\",\n      \"value\": \"Junin\"\n    },\n    \"phoneAddress\": {\n      \"type\": \"PhoneNumber\",\n      \"description\": \"0938305955\"\n    }\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8283/support/business-banking/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8283",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatchClient",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"password\": \"987654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8283/support/business-banking/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8283",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClient",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8283/support/business-banking/v1/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8283",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "GetAccountByfilter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"365077680\",\n  \"type\": {\n    \"code\": \"AHO\",\n    \"description\": \"AHORRO\"\n  },\n  \"balance\": 200,\n  \"status\": true,\n  \"clientId\": \"2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccountById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/accounts/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"accounts",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutAccount",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"3249020586\",\n  \"type\": {\n    \"code\": \"CRRE\",\n    \"description\": \"CREDITO\"\n  },\n  \"balance\": 1000.50,\n  \"status\": true,\n  \"clientId\": \"2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatchAccount",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"balance\": 200,\n  \"status\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movement",
+			"item": [
+				{
+					"name": "GetMovementByFilter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostMovement",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2025-02-15\",\n  \"type\": {\n    \"code\": \"DEPOSITO\",\n    \"description\": \"Deposito programado\"\n  },\n  \"value\": 50,\n  \"balance\": 200,\n  \"accountId\": \"2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/movements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMovementById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/movements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutMovement",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2025-02-15\",\n  \"type\": {\n    \"code\": \"RETIRO\",\n    \"description\": \"Retiro programado\"\n  },\n  \"value\": 50,\n  \"balance\": 200,\n  \"accountId\": \"2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/movements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatchMovement",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"date\": \"2025-02-15\",\n  \"type\": {\n    \"code\": \"DEPOSITO\",\n    \"description\": \"Deposito Programado el dia de hoy\"\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/movements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMovement",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8284/support/business-banking/v1/movements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8284",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"type\": {\n    \"code\": \"DEPOSITO\",\n    \"description\": \"Deposito thf\"\n  },\n  \"value\": 100\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8285/support/business-banking/v1/movements/365077680/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8285",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements",
+								"365077680",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8285/support/business-banking/v1/movements/365077680/report?startDate=2025-02-13&endDate=2025-02-15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8285",
+							"path": [
+								"support",
+								"business-banking",
+								"v1",
+								"movements",
+								"365077680",
+								"report"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2025-02-13"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-02-15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
