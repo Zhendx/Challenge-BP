@@ -1,31 +1,30 @@
 server:
-  port: 8181
+  port: 8285
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 spring:
   main:
-    allow-bean-definition-overriding: true
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    password: postgrespw
-    username: postgres
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+    allow-bean-definition-overriding: on
+    lazy-initialization: on
+  r2dbc:
+    url: r2dbc:pool:postgresql://postgres:postgrespw@localhost:5432/postgres
   output:
     ansi:
       enabled: ALWAYS
+  http-client:
+    api:
+      client-sp-client:
+        base-url: http://localhost:8283/
 
 logging:
   auditor:
     mode: 'CONSOLE'
   sendLog: true
-  level:
-    org.springframework: DEBUG
 
 control:
   errors:
