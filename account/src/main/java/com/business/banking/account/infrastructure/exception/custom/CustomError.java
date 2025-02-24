@@ -9,4 +9,7 @@ public class CustomError {
     public static final ErrorApp DeleteException = new ErrorApp("CE004","Cannot be deleted as it has dependencies.");
     public static final ErrorApp RetreatException = new ErrorApp("CE005","The balance is less than the amount you want to withdraw.");
     public static final ErrorApp BalanceException = new ErrorApp("CE006","The entered value is not valid.");
+    public static final ErrorApp TransactionException = new ErrorApp("CE006","The type of transaction is incorrect.");
+
+
 }

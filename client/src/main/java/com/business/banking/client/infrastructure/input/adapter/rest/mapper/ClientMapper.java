@@ -3,7 +3,6 @@ package com.business.banking.client.infrastructure.input.adapter.rest.mapper;
 import com.business.banking.client.domain.PatchClientRequest;
 import com.business.banking.client.domain.PutClientRequest;
 import com.business.banking.client.infrastructure.input.adapter.rest.models.Client;
-import com.business.banking.client.infrastructure.input.adapter.rest.models.Gender;
 import com.business.banking.client.infrastructure.input.adapter.rest.models.GetClientByIdResponse;
 import com.business.banking.client.infrastructure.input.adapter.rest.models.PostClientRequest;
 import org.mapstruct.*;

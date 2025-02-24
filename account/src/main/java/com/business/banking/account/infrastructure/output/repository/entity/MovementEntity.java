@@ -1,8 +1,5 @@
 package com.business.banking.account.infrastructure.output.repository.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.annotation.Id;
@@ -20,11 +17,10 @@ import java.time.LocalDate;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Generated
-@Entity
+
 @Table("challenge.movement")
 public class MovementEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column("movement_id")
     Long movementId;
 

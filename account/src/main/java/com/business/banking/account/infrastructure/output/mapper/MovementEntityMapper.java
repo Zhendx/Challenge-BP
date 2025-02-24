@@ -31,12 +31,12 @@ public interface MovementEntityMapper {
     MovementEntity toMovementEntityPut(Movement movement);
 
     @Mapping(target = "number", source = "account.number")
-    @Mapping(target = "type", source = "account.type")
+    @Mapping(target = "type", source = "account.type.description")
     @Mapping(target = "balance", source = "movement.balance")
     @Mapping(target = "status", source = "account.status")
     @Mapping(target = "typeMovement", source = "movement.type.code")
     @Mapping(target = "value", source = "movement.value")
-    MovementTransactionResponse movementToMovementTransactionResponse(Movement movement, AccountEntity account);
+    MovementTransactionResponse movementToMovementTransactionResponse(Movement movement, Account account);
 
     @Mapping(target = "date", source = "movement.date")
     @Mapping(target = "name", source = "client.person.name")
