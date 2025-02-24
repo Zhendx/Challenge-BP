@@ -8,11 +8,7 @@ import com.business.banking.account.infrastructure.input.adapter.rest.models.Pos
 import org.mapstruct.*;
 
 @Mapper(
-        componentModel = "spring",
-        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,
-        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
-        unmappedTargetPolicy = ReportingPolicy.IGNORE,
-        builder = @Builder(disableBuilder = true)
+        componentModel = "spring"
 )
 public interface AccountMapper {
 

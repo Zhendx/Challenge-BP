@@ -9,11 +9,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Mapper(
-        componentModel = "spring",
-        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,
-        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
-        unmappedTargetPolicy = ReportingPolicy.IGNORE,
-        builder = @Builder(disableBuilder = true)
+        componentModel = "spring"
 )
 public interface MovementEntityMapper {
 

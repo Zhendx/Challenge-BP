@@ -8,11 +8,7 @@ import com.business.banking.client.infrastructure.input.adapter.rest.models.Post
 import org.mapstruct.*;
 
 @Mapper(
-        componentModel = "spring",
-        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,
-        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
-        unmappedTargetPolicy = ReportingPolicy.IGNORE,
-        builder = @Builder(disableBuilder = true)
+        componentModel = "spring"
 )
 public interface ClientMapper {
     @Mapping(target = "person.gender.code", source = "client.person.gender.value")

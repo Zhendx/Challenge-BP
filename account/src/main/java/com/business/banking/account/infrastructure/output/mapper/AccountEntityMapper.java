@@ -7,11 +7,7 @@ import org.mapstruct.*;
 import java.util.Objects;
 
 @Mapper(
-        componentModel = "spring",
-        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS,
-        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,
-        unmappedTargetPolicy = ReportingPolicy.IGNORE,
-        builder = @Builder(disableBuilder = true)
+        componentModel = "spring"
 )
 public interface AccountEntityMapper {
 
