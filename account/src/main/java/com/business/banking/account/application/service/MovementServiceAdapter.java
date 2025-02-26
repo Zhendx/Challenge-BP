@@ -96,6 +96,9 @@ public class MovementServiceAdapter implements MovementServicePort {
                 .flatMapMany(account -> spClientPort.getClientById(String.valueOf(account.getClientId()))
                         .flatMapMany(client -> movementRepositoryPort.getMovementByRangeDate(account.getAccountId(), startDate, endDate)
                                 .flatMap(movement -> {
+                                    if (!movement.getType().getCode().equalsIgnoreCase("RETIRO") && !movement.getType().getCode().equalsIgnoreCase("DEPOSITO")) {
+                                        throw new AppException(CustomError.TransactionException);
+                                    }
                                     MovementReportResponse movementReportResponse = new MovementReportResponse();
                                     movementReportResponse.setAvailableBalance(movement.getType().getCode().equalsIgnoreCase("DEPOSITO") ?
                                             movement.getBalance().add(movement.getValue()) :

@@ -23,8 +23,7 @@ import static org.mockito.Mockito.when;
 
 @WebFluxTest(value = ClientController.class)
 @ExtendWith(MockitoExtension.class)
-@ImportAutoConfiguration({PorpertiesTest.class}
-)
+@ImportAutoConfiguration({PorpertiesTest.class})
 class ClientControllerTest {
     @MockBean
     private ClientServicePort clientServicePort;

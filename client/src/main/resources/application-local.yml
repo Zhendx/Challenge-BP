@@ -13,6 +13,24 @@ spring:
     lazy-initialization: on
   r2dbc:
     url: r2dbc:pool:postgresql://postgres:postgrespw@localhost:5432/postgres
+  cloud:
+    kubernetes:
+      enabled: false
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:29093
+          configuration:
+            sasl:
+              jaas:
+                config: org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString";
+              mechanism: PLAIN
+            security:
+              protocol: PLAINTEXT
+      bindings:
+        producerClient-out-0:
+          destination: tem_tpc_client
+      output-bindings: producerClient-out-0
   output:
     ansi:
       enabled: ALWAYS

@@ -1,6 +1,7 @@
 package com.business.banking.client.application.service;
 
 import com.business.banking.client.application.input.port.ClientServicePort;
+import com.business.banking.client.application.output.port.PublisherEventPort;
 import com.business.banking.client.domain.Client;
 import com.business.banking.client.domain.PatchClientRequest;
 import com.business.banking.client.domain.PutClientRequest;
@@ -8,6 +9,7 @@ import com.business.banking.client.infrastructure.exception.AppException;
 import com.business.banking.client.infrastructure.exception.custom.CustomError;
 import com.business.banking.client.infrastructure.output.mapper.ClientEntityMapper;
 import com.business.banking.client.infrastructure.output.repository.ClientReactiveRepository;
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,6 +21,7 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class ClientServiceAdapter implements ClientServicePort {
 
+    private final PublisherEventPort publisherEventPort;
     private final ClientReactiveRepository clientReactiveRepository;
     private final ClientEntityMapper clientEntityMapper;
 
@@ -75,6 +78,7 @@ public class ClientServiceAdapter implements ClientServicePort {
     public Mono<Void> postClient(Client postClientRequest) {
         log.info("|--> Starting to post client");
         return clientReactiveRepository.save(clientEntityMapper.toClientEntity(postClientRequest))
+                .flatMap(client->sendEvent(clientEntityMapper.toClient(client)))
                 .doOnError(error -> log.error("<--| Error to post client! -> {}", error.getMessage()))
                 .onErrorMap(throwable -> new AppException(CustomError.ApiClientException))
                 .doOnNext(success -> log.info("<--| Success to post client!"))
@@ -95,9 +99,17 @@ public class ClientServiceAdapter implements ClientServicePort {
                 .then();
     }
 
-    private Client updateClient(Client client, PutClientRequest putClientRequest){
+    private Client updateClient(Client client, PutClientRequest putClientRequest) {
         client.setStatus(putClientRequest.getStatus());
         client.setPerson(putClientRequest.getPerson());
         return client;
+    }
+
+    private Mono<Boolean> sendEvent(Client client) {
+        return Mono.fromCallable(() -> new Gson().toJson(client))
+                .flatMap(jsonData -> {
+                    log.info("Starting to send the event with data: {}", jsonData);
+                    return publisherEventPort.sendClientEvent(jsonData);
+                });
     }
 }

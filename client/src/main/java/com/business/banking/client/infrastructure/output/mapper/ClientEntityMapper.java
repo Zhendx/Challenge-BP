@@ -24,7 +24,6 @@ public interface ClientEntityMapper {
     @Mapping(target = "person.identification.identifier.value", source="clientEntity.identification")
     Client toClient(ClientEntity clientEntity);
 
-
     @Mapping(target = "gender", source = "client.person.gender")
     @Mapping(target = "name", source = "client.person.name")
     @Mapping(target = "age", source = "client.person.age")

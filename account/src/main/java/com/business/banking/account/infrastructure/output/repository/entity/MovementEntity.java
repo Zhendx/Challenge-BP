@@ -17,7 +17,6 @@ import java.time.LocalDate;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Generated
-
 @Table("challenge.movement")
 public class MovementEntity {
     @Id

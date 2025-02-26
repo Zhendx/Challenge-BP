@@ -3,7 +3,7 @@ import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 plugins {
     id 'jacoco'
 	id 'java'
-	id 'org.springframework.boot' version '3.4.2'
+	id 'org.springframework.boot' version '3.3.7'
 	id 'io.spring.dependency-management' version '1.1.7'
 	id 'org.openapi.generator' version '7.9.0'
 	id 'info.solidsoft.pitest' version '1.9.0'
@@ -69,7 +69,9 @@ dependencies {
 	compileOnly group: "org.projectlombok", name: "lombok", version: ""
 
 	// Kafka
-	implementation 'org.apache.kafka:kafka-clients:3.8.1'
+	implementation group: 'commons-io', name: 'commons-io', version: '2.16.1'
+	implementation 'org.springframework.cloud:spring-cloud-starter-stream-kafka:4.1.3'
+	implementation 'com.google.code.gson:gson:2.11.0'
 
 	// Database
 	implementation 'org.postgresql:r2dbc-postgresql:1.0.2.RELEASE'

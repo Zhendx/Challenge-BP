@@ -2,19 +2,25 @@ package com.business.banking.account.application.service;
 
 import com.business.banking.account.application.input.port.AccountServicePort;
 import com.business.banking.account.application.output.port.AccountRepositoryPort;
-import com.business.banking.account.domain.Account;
-import com.business.banking.account.domain.PatchAccountRequest;
-import com.business.banking.account.domain.PutAccountRequest;
-import com.business.banking.account.domain.Type;
+import com.business.banking.account.domain.*;
 import com.business.banking.account.infrastructure.exception.AppException;
 import com.business.banking.account.infrastructure.exception.custom.CustomError;
 import com.business.banking.account.infrastructure.output.mapper.AccountEntityMapper;
 import com.business.banking.account.infrastructure.output.repository.AccountReactiveRepository;
+import com.business.banking.account.infrastructure.util.GenerateUtils;
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Bean;
+import org.springframework.messaging.Message;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+
+import java.math.BigDecimal;
+import java.util.Map;
+import java.util.function.Consumer;
 
 @Service
 @RequiredArgsConstructor
@@ -30,8 +36,7 @@ public class AccountServiceAdapter implements AccountServicePort {
                 .flatMap(account -> accountRepositoryPort.deleteAccount(account.getAccountId())
                         .doOnError(error -> log.error("<--| Error to delete account! -> {}", error.getMessage()))
                         .onErrorMap(throwable -> new AppException(CustomError.ApiClientException))
-                        .doOnSuccess(success -> log.info("<--| Success to delete account!")))
-                ;
+                        .doOnSuccess(success -> log.info("<--| Success to delete account!")));
     }
 
     @Override
