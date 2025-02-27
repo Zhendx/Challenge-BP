@@ -1,5 +1,6 @@
 package com.business.banking.client.domain;
 
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -12,5 +13,6 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Generated
 public class Identifier {
+    @Size(min=10)
     String value;
 }

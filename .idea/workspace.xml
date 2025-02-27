@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f7e79233-0eb3-4677-af51-67fb48ecdb2f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/account/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/account/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/AccountApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/AccountApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/configuration/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/configuration/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/controller/MovementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/controller/MovementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/exception/AppException.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/exception/AppException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/exception/ErrorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/exception/ErrorApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/exception/custom/CustomError.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/exception/custom/CustomError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/exception/resolver/HandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/exception/resolver/HandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/repository/impl/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/impl/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/repository/impl/MovementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/impl/MovementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/MovementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/MovementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/AccountRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/AccountRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/AccountResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/AccountResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/MovementReportResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/MovementReportResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/MovementRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/MovementRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/MovementResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/MovementResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/MovementTransactionRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/MovementTransactionRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/dto/MovementTransactionResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/dto/MovementTransactionResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/entity/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/entity/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/entity/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/entity/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/impl/MovementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/impl/MovementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/impl/RedisSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/impl/RedisSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/mapper/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/src/main/java/com/pichincha/business/banking/services/service/mapper/MovementMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/account/src/main/java/com/services/service/mapper/MovementMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/configuration/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/configuration/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/exception/AppException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/exception/AppException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/exception/ErrorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/exception/ErrorApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/exception/custom/CustomError.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/exception/custom/CustomError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/exception/resolver/HandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/exception/resolver/HandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/repository/impl/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/impl/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/dto/ClientRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/dto/ClientRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/dto/ClientResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/dto/ClientResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/impl/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/pichincha/business/banking/services/service/mapper/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/services/service/mapper/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/test/java/com/pichincha/business/banking/services/controller/ClientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/test/java/com/services/controller/ClientControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/test/java/com/pichincha/business/banking/services/service/impl/ClientServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/test/java/com/services/service/impl/ClientServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/test/java/com/pichincha/business/banking/services/util/MockObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/test/java/com/services/util/MockObjects.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/account">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/client">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2t0QIkfpSLs2U1M2NuxMfXsnAQd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/abarrezu/Downloads/NTT-BP/Challenge - Hexagonal/Client"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.services" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7e79233-0eb3-4677-af51-67fb48ecdb2f" name="Changes" comment="" />
+      <created>1739486435178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739486435178</updated>
+    </task>
+    <servers />
+  </component>
+</project>
